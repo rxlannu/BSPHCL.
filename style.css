@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+header {
+  background: linear-gradient(to right, #224476, #e6edf6); /* dark blue to light */
+  border-bottom: 2px solid #ccc;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Top: Title area */
+.header-top {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem 0.2rem 1.5rem;
+}
+
+.main-title {
+  color: #a5175e; /* dark pink/magenta from screenshot */
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  margin: 0;
+  text-align: left;
+}
+
+.sub-title {
+  color: #000; /* dark gray/black */
+  font-size: 1.2rem;
+  margin: 0.3rem 0 0.2rem 0;
+  text-align: left;
+}
+
+/* Header Bottom: Address + links */
+.header-bottom {
+  background-color: #003366; /* solid dark blue strip */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.address-text {
+  color: orange; /* address text as seen in image */
+}
+
+.link-text a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background: #003366;
+  color: white;
+  padding-top: 1rem;
+  height: calc(100vh - 100px); /* adjust height under header */
+  position: sticky;
+  top: 0;
+}
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 220px;
+  background: #003366;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.sidebar-title {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #002244;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Existing styles for <ul>, <li>, etc. remain as already defined */
+
+
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li {
+  padding: 10px 10px 10px 30px;
+  position: relative;
+  border-bottom: 1px solid rgb(2, 2, 48);
+}
+
+.sidebar ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 10px;
+  color: yellow;
+  font-size: 0.9rem;
+}
+
+
+.sidebar ul li:hover {
+  background-color: #0055aa;
+}
+
+
+/* Main Content */
+.main-content {
+  padding: 15px 30px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.top-alerts {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  justify-items: center;
+}
+
+.image-section img {
+  width: 130px;
+  height: 100px;
+  display: block;
+  object-fit: cover;
+  border: none;
+  border-radius: 0px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 30px; /* creates space between image, main, and right sections */
+}
+
+
+
+
+
+
+
+
+
+.link-section {
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.link-section a {
+  text-decoration: none;
+  color: blue;
+}
+
+.link-section a:hover {
+  text-decoration: underline;
+  color: #d40000;
+}
+
+
+
+
+
+
+
+
+
+/*.key-contacts {
+  width: 100%;
+  max-width: 900px;
+  background-color: #f2f7ff;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.key-contacts h4 {
+  font-size: 1.2rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  margin-bottom: 2px;
+}
+
+.key-contacts strong {
+  color: #003366;
+}*/
+
+/* Make sure the page is responsive */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the contact section */
+.key-contacts {
+  padding: 10px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+/* Headings */
+.key-contacts h4 {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Contact paragraph styling */
+.key-contacts p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Important contacts in red */
+.key-contacts strong[style*="darkred"] {
+  color: darkred;
+}
+
+/* Image and link inline for Form 16 */
+.form16 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.form16 img {
+  width: 18px;
+  height: auto;
+}
+
+/* Links section */
+.other-links, .vigilance, .gst-cin {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+a {
+  color: #0044cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .key-contacts {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .key-contacts h4 {
+    font-size: 18px;
+  }
+
+  .form16 {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.form16 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form16 img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.form16 a {
+  text-decoration: none;
+  color: #0000ee;
+}
+
+.other-links {
+  margin-top: 10px;
+  font-size: 0.94rem;
+  color: #333;
+}
+
+.other-links a {
+  color: #3300cc;
+  text-decoration: none;
+}
+
+.vigilance {
+  margin-top: 15px;
+  font-size: 0.94rem;
+}
+
+.vigilance a {
+  color: #0033aa;
+  text-decoration: none;
+}
+
+.gst-cin {
+  margin-top: 15px;
+  font-size: 0.93rem;
+  color: #333;
+}
+
+
+
+
+.page-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Main content stays in the center */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  min-width: 0;
+  width: 70%;
+}
+.content-wrapper {
+  display: flex;
+  
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* Right sidebar floated outside main content */
+.right-sidebar {
+ flex: 0 0 400px;
+ 
+  padding: 20px 10px 0 10px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  
+  flex-shrink: 0;
+  width: 25%;
+   
+}
+
+/* Boxes in right sidebar */
+.right-sidebar .box {
+  background-color: #e8f1ff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+}
+
+.right-sidebar .box h4 {
+  color: #003366;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #003366;
+  padding-bottom: 5px;
+}
+
+.right-sidebar .box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.right-sidebar .box ul li {
+  margin-bottom: 8px;
+}
+
+.right-sidebar .box ul li a {
+  color: #0033cc;
+  text-decoration: none;
+}
+
+.right-sidebar .box ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Ticker Box */
+.latest-updates-box .ticker-container {
+  height: 80px; /* Visible area (adjust as needed) */
+  overflow: hidden;
+  position: relative;
+  background-color: #bce2f6;
+}
+
+/* Animate List */
+.ticker-list {
+  display: flex;
+  flex-direction: column;
+  animation: scrollTicker 6s linear infinite;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ticker-list li {
+  padding: 4px 0;
+  color: #0033cc;
+  
+  font-size: 0.85rem;
+}
+
+/* Keyframes for vertical scroll */
+@keyframes scrollTicker {
+  0% { transform: translateY(0%); }
+  20% { transform: translateY(0%); }
+  25% { transform: translateY(-25%); }
+  45% { transform: translateY(-25%); }
+  50% { transform: translateY(-50%); }
+  70% { transform: translateY(-50%); }
+  75% { transform: translateY(-75%); }
+  95% { transform: translateY(-75%); }
+  100% { transform: translateY(0%); }
+}
+
+
+
+
+
